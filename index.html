@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilih Foto ID Card KKL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div id="halaman-nama">
+            <h1>Pilih Namamu</h1>
+            <p>Klik namamu untuk memilih foto yang akan digunakan di ID Card.</p>
+            <div class="daftar-nama">
+                </div>
+        </div>
+
+        <div id="halaman-foto" class="hidden">
+            <h2 id="nama-terpilih">Memilih untuk: </h2>
+            <p>Pilih salah satu foto di bawah ini.</p>
+            <form name="submit-to-google-sheet">
+                <input type="hidden" name="Nama" id="form-nama">
+                <input type="hidden" name="PilihanFoto" id="form-pilihan-foto">
+
+                <div class="galeri-foto" id="galeri-pilihan">
+                    </div>
+
+                <button type="submit" id="tombol-kirim">Kirim Pilihanku</button>
+                <button type="button" id="tombol-kembali">Kembali ke Daftar Nama</button>
+            </form>
+        </div>
+        
+        <div id="halaman-terima-kasih" class="hidden">
+             <h1>Terima Kasih!</h1>
+             <p>Pilihan fotomu sudah berhasil disimpan.</p>
+             <button type="button" id="tombol-selesai">Selesai</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
