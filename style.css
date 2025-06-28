@@ -8,6 +8,7 @@ body {
     min-height: 100vh;
     margin: 0;
 }
+
 .container {
     background-color: white;
     padding: 2em;
@@ -17,9 +18,11 @@ body {
     max-width: 600px;
     text-align: center;
 }
+
 .hidden {
     display: none;
 }
+
 .daftar-nama button {
     display: block;
     width: 100%;
@@ -33,34 +36,50 @@ body {
     cursor: pointer;
     transition: background-color 0.3s;
 }
+
 .daftar-nama button:hover {
     background-color: #0056b3;
 }
+
 .galeri-foto {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
+    align-items: center; /* Menambahkan ini agar foto lebih rapi di tengah */
     margin: 20px 0;
 }
+
 .item-foto {
     cursor: pointer;
     border: 3px solid transparent;
     border-radius: 8px;
     overflow: hidden;
     transition: all 0.3s;
+    display: flex; /* Menambahkan ini untuk alignment */
+    align-items: center;
+    justify-content: center;
 }
+
+/* ======================================= */
+/* === BAGIAN YANG DIUBAH AGAR FOTO UTUH === */
+/* ======================================= */
 .item-foto img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
+    width: 150px;       /* Lebar tetap 150px */
+    height: auto;       /* Tinggi menyesuaikan otomatis agar tidak terpotong */
+    max-height: 250px;  /* Batas tinggi maksimal agar tidak terlalu menjulang */
     display: block;
 }
+/* ======================================= */
+/* ======================================= */
+
+
 .item-foto.selected {
     border-color: #007BFF;
     transform: scale(1.05);
     box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
 }
+
 button {
     padding: 12px 25px;
     font-size: 1em;
@@ -69,14 +88,17 @@ button {
     cursor: pointer;
     margin-top: 10px;
 }
+
 #tombol-kirim {
     background-color: #28a745;
     color: white;
 }
+
 #tombol-kirim:disabled {
     background-color: #aaa;
     cursor: not-allowed;
 }
+
 #tombol-kembali, #tombol-selesai {
     background-color: #6c757d;
     color: white;
